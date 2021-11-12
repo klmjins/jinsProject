@@ -1,0 +1,78 @@
+@charset "utf-8";
+#wrap{
+    width: 100%;
+    padding-top: 30px;
+}
+header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.join_logo a{
+    display: inline-block;
+    background-image: url(../img/logo.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width:200px;
+    height: 100px;
+    text-indent: -9999px;
+}
+
+#container h1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#container form{
+    /* background-color: sandybrown; */
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+}
+.check_msg{
+    display: inline-block;
+    color: rgb(250, 24, 24);
+    margin-left: 95px;
+    margin-top: 5px;
+    width: 180px;
+}
+.join_form div{
+    width: 280px;
+    margin: 0 auto 20px auto;
+}
+.join_form .form_name{
+    display: inline-block;
+    width: 90px;
+}
+.join_form input{
+    width: 180px;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid #222;
+    background-color: rgba(255, 255, 255, 0.493);
+    outline: none;
+}
+
+#user_gen{
+    width: 180px;
+    height: 30px;
+    border: 0;
+    background-color: rgba(182, 179, 179, 0.226);
+    outline: none;
+}
+.join_btn .j_btn{
+    width: 280px;
+    height: 40px;
+    border: none;
+    background-color: rgb(236, 202, 109);
+    margin: 20px 0 10px 0;
+}
+
+.gotoLogin{
+    text-align: center;
+}
+.gotoLogin a{
+    color: #666;
+}

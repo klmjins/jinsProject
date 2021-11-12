@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+.r-title{
+    color: #444;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+#write-wrap{
+    width: 1000px;
+    margin: 40px auto 0 auto;
+    background-color: rgb(248, 247, 247);
+    border: 1px solid #e2e2e2;
+    min-width: 700px;
+}
+.category{
+    text-align: center;
+    margin-top: 30px;
+}
+.category select{
+    width: 500px;
+    height: 40px;
+    border: 1px solid #eee;
+    padding: 0 10px;
+    color: #444;
+    font-weight: 700;
+}
+.write-title{
+    /* background-color: yellow; */
+    text-align: center;
+    margin: 10px 0 30px 0;
+    padding-top: 20px;
+}
+.write-title span{
+    font-size: 20px;
+    font-weight: 700;
+}
+#bo-title{
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #e2e2e2;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.write-main{
+    width: 750px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.726);
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+}
+/* -------------------img upload--------------- */
+.uploadImg{
+    width: 300px;
+    border: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.uploadDiv{
+    margin-bottom: 10px;
+}
+.uploadDiv input[type="file"] { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip:rect(0,0,0,0); 
+    border: 0; 
+}
+.uploadDiv label { 
+    display: inline-block; 
+    padding: 7px;
+    color: #333; 
+    font-size: inherit; 
+    line-height: normal; 
+    vertical-align: middle; 
+    border: 1px solid #ccc;
+    background-color: #e5e5e5;
+    cursor: pointer; 
+    border-radius: 3px; 
+}
+/* named upload */ 
+.uploadDiv .upload-name { 
+    display: inline-block; 
+    padding: 7px; /* label의 패딩값과 일치 */ 
+    font-size: inherit; 
+    font-family: inherit; 
+    line-height: normal; 
+    vertical-align: middle; 
+    background-color: #f5f5f5; 
+    border: 1px solid #ebebeb; 
+    border-radius: 3px; 
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+    -moz-appearance: none; 
+    appearance: none; 
+}
+
+
+.bigPictureWrapper{
+    text-align: center;
+    line-height: 335px;
+    border: 1px dotted #c4c2c2;
+    width: 275px;
+    height: 335px;
+}
+/* -------------------img upload 끝--------------- */
+
+#bo-text{
+    width: 430px;
+    height: 400px;
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    padding: 30px 20px 30px 10px;
+    font-size: 17px;
+    outline: none;
+}
+.register-btn{
+    margin-bottom: 30px;
+    /* background-color: #e2e2e2; */
+}
+.register-btn ul {
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 150px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background-color: #e5e5e5;
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
