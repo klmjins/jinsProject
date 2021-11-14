@@ -59,13 +59,22 @@ header{
     background-size: 80%;
 }
 
-.login_btn button{
+.login_btn .login_button{
     width: 220px;
     height: 40px;
     border: none;
     background-color: rgb(236, 202, 109);
     margin: 20px 0;
 }
+ 
+/* 로그인 실패시 경고글 */
+.login_warn{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color : red;
+}
+
 .login_bottom ul{
     display: flex;
     justify-content: center;

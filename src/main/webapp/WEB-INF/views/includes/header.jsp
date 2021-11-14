@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,12 +35,21 @@
                 </ul>
             </div><!--.gnb-->
             <div class="util">
-                <ul>
-                    <li><a href="/join/login">LOGIN</a></li>
-                    <li class="login_show"><a href="">LOGOUT</a></li>
-                    <li class="login_show"><a href="">MODIFY</a></li>
-                    <li><a href="/join/join">JOIN</a></li>
-                </ul>
+            	<!-- 로그인 되지 않은 상태 -->
+                <c:if test="${user==null}">
+	                <ul>
+	                    <li><a href="/join/login">LOGIN</a></li>
+	                    <li><a href="/join/join">JOIN</a></li>
+	                </ul>
+                </c:if>
+                <!-- 로그인 된 상태 -->
+                <c:if test="${user!=null}">
+	                <ul>
+	                    <li><span>${user.user_id}님</span></li>
+	                    <li><a href="">MODIFY</a></li>
+	                    <li><a href="">LOGOUT</a></li>
+	                </ul>
+                </c:if>
             </div><!--.util-->
             
         </div><!--.headerIn-->
