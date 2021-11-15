@@ -12,7 +12,6 @@
 		                <div class="fCs">
 		                    <h3>문의사항</h3>
 		                    <p class="tel">
-		                        <img src="./resources/img/icon_tel.png" alt="">
 		                        <span></span>
 		                    </p>
 		                    <P class="time">

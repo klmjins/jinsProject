@@ -31,7 +31,7 @@ public class UserController {
 	}
 	
 	// 로그인
-	@PostMapping("login")
+	@PostMapping("login.do")
 					//로그인 시 session에 회원정보를 저장하기 위해			로그인 실패 시 리다이렉트 된 로그인 페이지에 실패를 의미하는 데이터를 전송하기 위해
 	public String login(HttpServletRequest request, UserDTO user, RedirectAttributes rttr) {
 		
@@ -46,11 +46,25 @@ public class UserController {
 			return "redirect:login";
 		}else {
 			// 아이디, 비밀번호 일치 -> 로그인 성공
-			session.setAttribute("member",lvo);
+			session.setAttribute("user",lvo);
 			return "redirect:../oobboard/board";
 		}
 		
 	}
+	
+	//로그아웃
+	@PostMapping("logout")
+	@ResponseBody
+	public void logout(HttpServletRequest request) {
+		//log.info("로그아웃 진입");
+		
+		HttpSession session = request.getSession();
+		
+		//		세션 전체를 무효화하는 메서드
+		session.invalidate();
+
+	}
+	
 	//회원가입 창으로 이동
 	@GetMapping("join")
 	public void joinGet() {

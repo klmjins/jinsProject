@@ -25,7 +25,7 @@
 .gnb{
     position: absolute;
     right: 0;
-    bottom: 9px;
+    bottom: 6px;
 }
 .gnb li a:hover{
     color: #ccc;
@@ -63,6 +63,12 @@
 }
 .util li a{
     color: #333;
+}
+.util .util_uname{
+    color: rgb(182, 124, 37);
+}
+#logout_btn{
+	cursor:pointer;
 }
 /* ------------------header 끝-------------------- */
 

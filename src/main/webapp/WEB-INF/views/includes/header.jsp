@@ -38,19 +38,41 @@
             	<!-- 로그인 되지 않은 상태 -->
                 <c:if test="${user==null}">
 	                <ul>
-	                    <li><a href="/join/login">LOGIN</a></li>
+	                    <li><a href="/join/login.do">LOGIN</a></li>
 	                    <li><a href="/join/join">JOIN</a></li>
 	                </ul>
                 </c:if>
                 <!-- 로그인 된 상태 -->
                 <c:if test="${user!=null}">
-	                <ul>
-	                    <li><span>${user.user_id}님</span></li>
-	                    <li><a href="">MODIFY</a></li>
-	                    <li><a href="">LOGOUT</a></li>
-	                </ul>
+                	
+		                <ul>
+		                    <li><span class="util_uname">${user.user_name}</span>님 안녕하세요</li>
+		                    <c:if test="${user.adminCk==0 }">
+		                    	<li><a href="">MODIFY</a></li>
+		                    </c:if>
+		                    <!-- 관리자 로그인 시 -->
+		                    <c:if test="${user.adminCk==1 }">
+		                    	<li><a href="/admin/main">관리자페이지</a></li>
+		                    </c:if>
+		                    <!-- 로그아웃 버튼 클릭 -> js 버튼 메서드 작동 -> ajax통해 로그아웃 요청 -> 서버 로그아웃 수행 -> 화면 이동없이 새로고침 통해 화면 변환 -->
+		                    <li class="logout"><a id="logout_btn">LOGOUT</a></li>
+		                </ul>
+	                
+	                
                 </c:if>
             </div><!--.util-->
             
         </div><!--.headerIn-->
     </header><!--#header-->
+    <script>
+	    $("#logout_btn").click(function(e){
+			$.ajax({
+	            type:"POST",
+	            url:"/join/logout",
+	            success:function(data){
+	                alert("로그아웃되었습니다.");
+	                document.location.reload();     
+	            } 
+	        }); // ajax 
+		});
+    </script>
